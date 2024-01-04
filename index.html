@@ -23,6 +23,10 @@
         #game-icons-container {
             margin: 20px;
         }
+
+        .title-group {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -50,6 +54,9 @@
             const subfoldersResponse = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/${iconsFolder}`);
             const subfoldersData = await subfoldersResponse.json();
 
+            // Create an object to store icons grouped by title ID
+            const groupedIcons = {};
+
             // Fetch icons from each subfolder
             for (const subfolder of subfoldersData) {
                 const subfolderName = subfolder.name;
@@ -58,20 +65,45 @@
 
                 iconsData.forEach(icon => {
                     const gameName = extractGameName(icon.name);
+                    const titleId = extractTitleId(icon.name);
 
                     // Filter icons based on search query
-                    if (gameName.includes(searchQuery.toLowerCase())) {
+                    if (gameName.toLowerCase().includes(searchQuery.toLowerCase())) {
                         const iconUrl = icon.download_url;
 
-                        const iconElement = document.createElement('div');
-                        iconElement.innerHTML = `
-                            <h3>${gameName}</h3>
-                            <img class='game-icon' src='${iconUrl}' alt='${gameName}'>
-                        `;
+                        // Create a container for each title ID
+                        if (!groupedIcons[titleId]) {
+                            groupedIcons[titleId] = [];
+                        }
 
-                        iconsContainer.appendChild(iconElement);
+                        // Store the icon in the corresponding title ID container
+                        groupedIcons[titleId].push({
+                            name: gameName,
+                            url: iconUrl
+                        });
                     }
                 });
+            }
+
+            // Display icons grouped by title ID
+            for (const titleId in groupedIcons) {
+                const titleGroupContainer = document.createElement('div');
+                titleGroupContainer.classList.add('title-group');
+
+                // Display title ID as a heading
+                titleGroupContainer.innerHTML = `<h3>Title ID: ${titleId}</h3>`;
+
+                groupedIcons[titleId].forEach(icon => {
+                    const iconElement = document.createElement('div');
+                    iconElement.innerHTML = `
+                        <h4>${icon.name}</h4>
+                        <img class='game-icon' src='${icon.url}' alt='${icon.name}'>
+                    `;
+
+                    titleGroupContainer.appendChild(iconElement);
+                });
+
+                iconsContainer.appendChild(titleGroupContainer);
             }
         }
 
@@ -79,6 +111,13 @@
             // Example: "#Drive-icon001-[0100969005E98000].jpg" -> "#Drive"
             const parts = fileName.split('-');
             return parts.slice(0, -2).join(' ').replace(/\b\w/g, (char) => char.toUpperCase());
+        }
+
+        function extractTitleId(fileName) {
+            // Example: "#Drive-icon001-[0100969005E98000].jpg" -> "0100969005E98000"
+            const regex = /\[([^\]]+)\]/;
+            const match = fileName.match(regex);
+            return match ? match[1] : '';
         }
 
         const searchBar = document.getElementById('search-bar');
