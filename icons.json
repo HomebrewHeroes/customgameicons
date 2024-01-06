@@ -7,15 +7,15 @@
         {
           "name": "Scarlet",
           "icons": [
-            {"name": "Icon001", "url": "https://i.ibb.co/jypTZ3p/pokemon-scarlet-icon001-0100-A3-D008-C5-C000.png", "author": "Author1", "description": "Icon 001 description"},
-            {"name": "Icon002", "url": "https://i.ibb.co/1mcjLB5/image-2024-01-06-160902255.png", "author": "Author2", "description": "Icon 002 description"}
+            {"name": "Icon001", "url": "https://i.ibb.co/jypTZ3p/pokemon-scarlet-icon001-0100-A3-D008-C5-C000.png", "author": "Aarontendo", "description": "Icon 001 description"},
+            {"name": "Icon002", "url": "https://i.ibb.co/1mcjLB5/image-2024-01-06-160902255.png", "author": "Nintendo", "description": "Icon 002 description"}
           ]
         },
         {
           "name": "Violet",
           "icons": [
-            {"name": "Icon001", "url": "https://i.ibb.co/0VK7TQ3/Pokemon-Violet.png", "author": "Author3", "description": "Icon 001 description"},
-            {"name": "Icon002", "url": "https://i.ibb.co/cc0Tcc1/pokemon-violet-zczj.jpg", "author": "Author1", "description": "Icon 002 description"}
+            {"name": "Icon001", "url": "https://i.ibb.co/0VK7TQ3/Pokemon-Violet.png", "author": "Aarontendo", "description": "Icon 001 description"},
+            {"name": "Icon002", "url": "https://i.ibb.co/cc0Tcc1/pokemon-violet-zczj.jpg", "author": "Nintendo", "description": "Icon 002 description"}
           ]
         }
       ]
@@ -34,9 +34,6 @@
     }
   ],
   "authors": [
-    {"name": "Author1", "link": "https://author1-site.com"},
-    {"name": "Author2", "link": "https://author2-site.com"},
-    {"name": "Author3", "link": "https://author3-site.com"},
     {"name": "Nintendo", "link": "https://www.nintendo.com/us/about/"},
     {"name": "Aarontendo", "link": "https://gamebanana.com/members/2292370"},
     {"name": "SirKira001", "link": "https://gamebanana.com/members/1720925"}
