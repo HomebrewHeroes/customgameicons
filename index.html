@@ -33,6 +33,7 @@
             flex-wrap: wrap;
             justify-content: space-evenly;
             margin-top: 10px;
+            transition: transform 0.3s ease-in-out;
         }
 
         .custom-icon {
@@ -40,6 +41,10 @@
             max-height: 100px;
             cursor: pointer;
             transition: transform 0.3s ease-in-out;
+        }
+
+        .custom-icon:hover {
+            transform: scale(1.2); /* Scale up on hover */
         }
     </style>
 </head>
@@ -85,7 +90,9 @@
                             customIcon.src = icon.url;
                             customIcon.alt = `${gameName} - ${subcategoryName} - ${icon.name}`;
                             customIcon.classList.add('custom-icon');
-                            // Removed the click event listener
+                            // Add hover effect
+                            customIcon.addEventListener('mouseover', () => customIcon.style.transform = 'scale(1.2)');
+                            customIcon.addEventListener('mouseout', () => customIcon.style.transform = 'scale(1)');
                             customIconsContainer.appendChild(customIcon);
                         });
                     });
