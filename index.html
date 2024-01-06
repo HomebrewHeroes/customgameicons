@@ -40,93 +40,65 @@
     <div id="game-icons-container"></div>
 
     <script>
-        const username = 'HomebrewHeroes';
-        const repo = 'customgameicons';
-        const iconsFolder = 'Icons';
+        let iconsData; // Variable to store the JSON data
 
-        async function fetchAllIcons(searchQuery) {
+        // Function to display icons based on the JSON data
+        function displayIcons(data, searchQuery) {
             const iconsContainer = document.getElementById('game-icons-container');
-
-            // Clear previous icons
             iconsContainer.innerHTML = '';
 
-            // Fetch all subfolders
-            const subfoldersResponse = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/${iconsFolder}`);
-            const subfoldersData = await subfoldersResponse.json();
+            data.games.forEach(game => {
+                const gameName = game.name;
 
-            // Create an object to store icons grouped by title ID
-            const groupedIcons = {};
+                // Filter games based on search query
+                if (gameName.toLowerCase().includes(searchQuery.toLowerCase())) {
+                    const gameGroupContainer = document.createElement('div');
+                    gameGroupContainer.classList.add('title-group');
 
-            // Fetch icons from each subfolder
-            for (const subfolder of subfoldersData) {
-                const subfolderName = subfolder.name;
-                const response = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/${iconsFolder}/${subfolderName}`);
-                const iconsData = await response.json();
+                    gameGroupContainer.innerHTML = `<h3>${gameName}</h3>`;
 
-                iconsData.forEach(icon => {
-                    const gameName = extractGameName(icon.name);
-                    const titleId = extractTitleId(icon.name);
+                    game.subcategories.forEach(subcategory => {
+                        const subcategoryName = subcategory.name;
 
-                    // Filter icons based on search query
-                    if (gameName.toLowerCase().includes(searchQuery.toLowerCase())) {
-                        const iconUrl = icon.download_url;
+                        const subcategoryContainer = document.createElement('div');
 
-                        // Create a container for each title ID
-                        if (!groupedIcons[titleId]) {
-                            groupedIcons[titleId] = [];
+                        // Filter subcategories based on search query
+                        if (subcategoryName.toLowerCase().includes(searchQuery.toLowerCase())) {
+                            subcategoryContainer.innerHTML = `<h4>${subcategoryName}</h4>`;
+
+                            subcategory.icons.forEach(icon => {
+                                const iconElement = document.createElement('div');
+                                iconElement.innerHTML = `
+                                    <h5>${icon.name}</h5>
+                                    <img class='game-icon' src='${icon.url}' alt='${icon.name}'>
+                                `;
+                                subcategoryContainer.appendChild(iconElement);
+                            });
+
+                            gameGroupContainer.appendChild(subcategoryContainer);
                         }
+                    });
 
-                        // Store the icon in the corresponding title ID container
-                        groupedIcons[titleId].push({
-                            name: gameName,
-                            url: iconUrl
-                        });
-                    }
-                });
-            }
-
-            // Display icons grouped by title ID
-            for (const titleId in groupedIcons) {
-                const titleGroupContainer = document.createElement('div');
-                titleGroupContainer.classList.add('title-group');
-
-                // Display title ID as a heading
-                titleGroupContainer.innerHTML = `<h3>Title ID: ${titleId}</h3>`;
-
-                groupedIcons[titleId].forEach(icon => {
-                    const iconElement = document.createElement('div');
-                    iconElement.innerHTML = `
-                        <h4>${icon.name}</h4>
-                        <img class='game-icon' src='${icon.url}' alt='${icon.name}'>
-                    `;
-
-                    titleGroupContainer.appendChild(iconElement);
-                });
-
-                iconsContainer.appendChild(titleGroupContainer);
-            }
-        }
-
-        function extractGameName(fileName) {
-            // Example: "#Drive-icon001-[0100969005E98000].jpg" -> "#Drive"
-            const parts = fileName.split('-');
-            return parts.slice(0, -2).join(' ').replace(/\b\w/g, (char) => char.toUpperCase());
-        }
-
-        function extractTitleId(fileName) {
-            // Example: "#Drive-icon001-[0100969005E98000].jpg" -> "0100969005E98000"
-            const regex = /\[([^\]]+)\]/;
-            const match = fileName.match(regex);
-            return match ? match[1] : '';
+                    iconsContainer.appendChild(gameGroupContainer);
+                }
+            });
         }
 
         const searchBar = document.getElementById('search-bar');
         searchBar.addEventListener('input', function () {
-            fetchAllIcons(this.value);
+            displayIcons(iconsData, this.value);
         });
 
         // Initial fetch to display all icons
-        fetchAllIcons('');
+        fetch('https://raw.githubusercontent.com/HomebrewHeroes/customgameicons/main/icons.json')
+            .then(response => response.json())
+            .then(data => {
+                // Store the data globally for later use
+                iconsData = data;
+                // Display icons initially
+                displayIcons(iconsData, '');
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
     </script>
 </body>
 </html>
