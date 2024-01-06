@@ -1,0 +1,40 @@
+{
+  "games": [
+    {
+      "name": "Pokémon Scarlet and Violet",
+      "subcategories": [
+        {
+          "name": "Scarlet",
+          "icons": [
+            {"name": "Icon001", "url": "https://i.ibb.co/jypTZ3p/pokemon-scarlet-icon001-0100-A3-D008-C5-C000.png"},
+            {"name": "Icon002", "url": "https://i.ibb.co/1mcjLB5/image-2024-01-06-160902255.png"}
+            // Add more icons as needed
+          ]
+        },
+        {
+          "name": "Violet",
+          "icons": [
+            {"name": "Icon001", "url": "https://i.ibb.co/0VK7TQ3/Pokemon-Violet.png"},
+            {"name": "Icon002", "url": "https://i.ibb.co/cc0Tcc1/pokemon-violet-zczj.jpg"}
+            // Add more icons as needed
+          ]
+        }
+        // Add more subcategories as needed
+      ]
+    },
+    {
+      "name": "Super Mario Bros. Wonder",
+      "subcategories": [
+        {
+          "name": "Bowser's Battleship Custom Cover",
+          "icons": [
+            {"name": "CustomIcon", "url": "https://i.ibb.co/WPqXk48/Custom-Snipperclips-Background-1-1.png"}
+            // Add more icons as needed
+          ]
+        }
+        // Add more subcategories as needed
+      ]
+    },
+    // Add more games as needed
+  ]
+}
