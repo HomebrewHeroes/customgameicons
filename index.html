@@ -85,7 +85,7 @@
                             customIcon.src = icon.url;
                             customIcon.alt = `${gameName} - ${subcategoryName} - ${icon.name}`;
                             customIcon.classList.add('custom-icon');
-                            customIcon.addEventListener('click', () => alert(`You clicked on ${icon.name}`)); // Replace with your custom action
+                            // Removed the click event listener
                             customIconsContainer.appendChild(customIcon);
                         });
                     });
