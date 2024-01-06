@@ -31,6 +31,18 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Super Smash Bros. Ultimate",
+      "normalIcon": "https://i.ibb.co/tKzCR84/08af58551a19df2a73ccb36f720388434a1965776b34675c6f69af3f93280330.jpg",
+      "subcategories": [
+        {
+          "name": "",
+          "icons": [
+            {"name": "Icon001", "url": "https://i.ibb.co/Dwp5Q48/637830690fc72.jpg", "author": "SirKira001", "description": ""}
+          ]
+        }
+      ]
     }
   ],
   "authors": [
