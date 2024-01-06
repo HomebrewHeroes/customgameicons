@@ -13,30 +13,40 @@
         .game-icon {
             max-width: 150px;
             max-height: 150px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
         }
 
-        #search-bar {
-            margin: 20px;
-            padding: 10px;
-        }
-
-        #game-icons-container {
-            margin: 20px;
+        .game-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-bottom: 20px;
         }
 
         .title-group {
-            margin-top: 20px;
+            margin: 20px;
+        }
+
+        .custom-icons {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-top: 10px;
+        }
+
+        .custom-icon {
+            max-width: 100px;
+            max-height: 100px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
         }
     </style>
 </head>
 <body>
     <h1>Custom Game Icons</h1>
 
-    <!-- Search bar -->
-    <input type="text" id="search-bar" placeholder="Search for game icons">
-
     <!-- All Icons Section -->
-    <h2>All Icons</h2>
     <div id="game-icons-container"></div>
 
     <script>
@@ -53,41 +63,50 @@
                 // Filter games based on search query
                 if (gameName.toLowerCase().includes(searchQuery.toLowerCase())) {
                     const gameGroupContainer = document.createElement('div');
-                    gameGroupContainer.classList.add('title-group');
+                    gameGroupContainer.classList.add('game-group');
 
-                    gameGroupContainer.innerHTML = `<h3>${gameName}</h3>`;
+                    // Display normal game icon
+                    const normalIcon = document.createElement('img');
+                    normalIcon.src = game.normalIcon; // Use the normalIcon field from the JSON
+                    normalIcon.alt = `${gameName} Normal Icon`;
+                    normalIcon.classList.add('game-icon');
+                    normalIcon.addEventListener('click', () => toggleCustomIcons(gameGroupContainer));
+                    gameGroupContainer.appendChild(normalIcon);
+
+                    // Display custom game icons
+                    const customIconsContainer = document.createElement('div');
+                    customIconsContainer.classList.add('custom-icons');
 
                     game.subcategories.forEach(subcategory => {
                         const subcategoryName = subcategory.name;
 
-                        const subcategoryContainer = document.createElement('div');
-
-                        // Filter subcategories based on search query
-                        if (subcategoryName.toLowerCase().includes(searchQuery.toLowerCase())) {
-                            subcategoryContainer.innerHTML = `<h4>${subcategoryName}</h4>`;
-
-                            subcategory.icons.forEach(icon => {
-                                const iconElement = document.createElement('div');
-                                iconElement.innerHTML = `
-                                    <h5>${icon.name}</h5>
-                                    <img class='game-icon' src='${icon.url}' alt='${icon.name}'>
-                                `;
-                                subcategoryContainer.appendChild(iconElement);
-                            });
-
-                            gameGroupContainer.appendChild(subcategoryContainer);
-                        }
+                        subcategory.icons.forEach(icon => {
+                            const customIcon = document.createElement('img');
+                            customIcon.src = icon.url;
+                            customIcon.alt = `${gameName} - ${subcategoryName} - ${icon.name}`;
+                            customIcon.classList.add('custom-icon');
+                            customIcon.addEventListener('click', () => alert(`You clicked on ${icon.name}`)); // Replace with your custom action
+                            customIconsContainer.appendChild(customIcon);
+                        });
                     });
+
+                    gameGroupContainer.appendChild(customIconsContainer);
 
                     iconsContainer.appendChild(gameGroupContainer);
                 }
             });
         }
 
-        const searchBar = document.getElementById('search-bar');
-        searchBar.addEventListener('input', function () {
-            displayIcons(iconsData, this.value);
-        });
+        function toggleCustomIcons(container) {
+            const customIconsContainer = container.querySelector('.custom-icons');
+            const transformValue = customIconsContainer.style.display;
+
+            if (transformValue === 'flex') {
+                customIconsContainer.style.display = 'none';
+            } else {
+                customIconsContainer.style.display = 'flex';
+            }
+        }
 
         // Initial fetch to display all icons
         fetch('https://raw.githubusercontent.com/HomebrewHeroes/customgameicons/main/icons.json')
