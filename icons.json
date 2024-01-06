@@ -2,6 +2,7 @@
   "games": [
     {
       "name": "Pokémon Scarlet and Violet",
+      "normalIcon": "https://i.ibb.co/dKrw1qD/pokemon-scarlet-1659542292648.jpg",
       "subcategories": [
         {
           "name": "Scarlet",
@@ -21,6 +22,7 @@
     },
     {
       "name": "Super Mario Bros. Wonder",
+      "normalIcon": "https://i.ibb.co/xSXzMFM/1x1-supermariobroswonder-1687454112497.jpg",
       "subcategories": [
         {
           "name": "Bowser's Battleship Custom Cover",
