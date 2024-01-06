@@ -29,6 +29,13 @@
           "icons": [
             {"name": "CustomIcon", "url": "https://i.ibb.co/WPqXk48/Custom-Snipperclips-Background-1-1.png", "author": "Aarontendo", "description": "I made this because I couldn't find any high quality custom icons for the game. I tinted the logo to suit the dark theme of Bowser's Battleship"}
           ]
+        },
+        {
+          "name": "Mario Wonder Icons",
+          "icons": [
+            {"name": "Icon001", "url": "https://i.ibb.co/MGdS1k3/Mario-Wonder-Icon001.png", "author": "Aarontendo", "description": "Icon 001 description"},
+            {"name": "Icon002", "url": "https://i.ibb.co/zN2Z1h0/Mario-Wonder-Icon002.png", "author": "Nintendo", "description": "Icon 002 description"}
+          ]
         }
       ]
     },
