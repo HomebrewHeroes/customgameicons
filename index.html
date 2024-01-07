@@ -150,18 +150,41 @@
                     const customIconsContainer = document.createElement('div');
                     customIconsContainer.classList.add('custom-icons');
 
-                    game.subcategories.forEach(subcategory => {
-                        const subcategoryName = subcategory.name;
+                    if (game.subcategories) {
+                        game.subcategories.forEach(subcategory => {
+                            const subcategoryName = subcategory.name;
 
-                        subcategory.icons.forEach(icon => {
+                            subcategory.icons.forEach(icon => {
+                                const customIconContainer = document.createElement('div');
+                                customIconContainer.classList.add('custom-icon-container');
+
+                                const customIcon = document.createElement('img');
+                                customIcon.src = icon.url;
+                                customIcon.alt = `${gameName} - ${subcategoryName} - ${icon.name}`;
+                                customIcon.classList.add('custom-icon');
+                                // Add hover effect
+                                customIcon.addEventListener('mouseover', () => customIcon.style.transform = 'scale(1.2)');
+                                customIcon.addEventListener('mouseout', () => customIcon.style.transform = 'scale(1)');
+                                customIcon.addEventListener('click', () => openModal(icon.url));
+
+                                const iconDetails = document.createElement('div');
+                                iconDetails.classList.add('icon-details');
+                                iconDetails.innerHTML = `By <a href="${data.authors.find(author => author.name === icon.author)?.link}" target="_blank">${icon.author}</a><br>${icon.description}`;
+                                
+                                customIconContainer.appendChild(customIcon);
+                                customIconContainer.appendChild(iconDetails);
+                                customIconsContainer.appendChild(customIconContainer);
+                            });
+                        });
+                    } else if (game.icons) { // Handle "Super Mario Bros. Wonder"
+                        game.icons.forEach(icon => {
                             const customIconContainer = document.createElement('div');
                             customIconContainer.classList.add('custom-icon-container');
 
                             const customIcon = document.createElement('img');
                             customIcon.src = icon.url;
-                            customIcon.alt = `${gameName} - ${subcategoryName} - ${icon.name}`;
+                            customIcon.alt = `${gameName} - ${icon.name}`;
                             customIcon.classList.add('custom-icon');
-                            // Add hover effect
                             customIcon.addEventListener('mouseover', () => customIcon.style.transform = 'scale(1.2)');
                             customIcon.addEventListener('mouseout', () => customIcon.style.transform = 'scale(1)');
                             customIcon.addEventListener('click', () => openModal(icon.url));
@@ -174,7 +197,7 @@
                             customIconContainer.appendChild(iconDetails);
                             customIconsContainer.appendChild(customIconContainer);
                         });
-                    });
+                    }
 
                     gameGroupContainer.appendChild(customIconsContainer);
 
