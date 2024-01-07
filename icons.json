@@ -7,15 +7,15 @@
         {
           "name": "Scarlet",
           "icons": [
-            {"name": "Icon001", "url": "https://i.ibb.co/jypTZ3p/pokemon-scarlet-icon001-0100-A3-D008-C5-C000.png", "author": "Aarontendo"},
-            {"name": "Icon002", "url": "https://i.ibb.co/1mcjLB5/image-2024-01-06-160902255.png", "author": "Nintendo"}
+            {"name": "Icon001", "url": "https://i.ibb.co/jypTZ3p/pokemon-scarlet-icon001-0100-A3-D008-C5-C000.png", "author": "Aarontendo", "hoverSound": "path/to/scarlet_icon001_sound.mp3"},
+            {"name": "Icon002", "url": "https://i.ibb.co/1mcjLB5/image-2024-01-06-160902255.png", "author": "Nintendo", "hoverSound": "path/to/scarlet_icon002_sound.mp3"}
           ]
         },
         {
           "name": "Violet",
           "icons": [
-            {"name": "Icon001", "url": "https://i.ibb.co/0VK7TQ3/Pokemon-Violet.png", "author": "Aarontendo"},
-            {"name": "Icon002", "url": "https://i.ibb.co/cc0Tcc1/pokemon-violet-zczj.jpg", "author": "Nintendo"}
+            {"name": "Icon001", "url": "https://i.ibb.co/0VK7TQ3/Pokemon-Violet.png", "author": "Aarontendo", "hoverSound": "path/to/violet_icon001_sound.mp3"},
+            {"name": "Icon002", "url": "https://i.ibb.co/cc0Tcc1/pokemon-violet-zczj.jpg", "author": "Nintendo", "hoverSound": "path/to/violet_icon002_sound.mp3"}
           ]
         }
       ]
@@ -24,14 +24,14 @@
       "name": "Super Mario Bros. Wonder",
       "normalIcon": "https://i.ibb.co/xSXzMFM/1x1-supermariobroswonder-1687454112497.jpg",
       "icons": [
-        {"name": "Icon001", "url": "https://i.ibb.co/WPqXk48/Custom-Snipperclips-Background-1-1.png", "author": "Aarontendo"}
+        {"name": "Icon001", "url": "https://i.ibb.co/WPqXk48/Custom-Snipperclips-Background-1-1.png", "author": "Aarontendo", "hoverSound": "path/to/wonder_icon001_sound.mp3"}
       ]
     },
     {
       "name": "Super Smash Bros. Ultimate",
       "normalIcon": "https://i.ibb.co/5rYHz8z/image-2024-01-07-105342237.png",
       "icons": [
-        {"name": "Icon001", "url": "https://i.ibb.co/gtG3ZfF/530-90-637830690fc72.jpg", "author": "SirKira001"}
+        {"name": "Icon001", "url": "https://i.ibb.co/gtG3ZfF/530-90-637830690fc72.jpg", "author": "SirKira001", "hoverSound": "path/to/ultimate_icon001_sound.mp3"}
       ]
     }
   ],
