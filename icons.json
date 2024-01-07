@@ -49,6 +49,13 @@
         {"name": "Icon002", "url": "https://i.ibb.co/gZmBTDy/image-2024-01-07-171027325.png", "author": "sodasoba", "hoverSound": "https://ia801003.us.archive.org/2/items/Cuphead_OST/Cuphead%20OST%20MP3/02%20Don%27t%20Deal%20With%20The%20Devil%20%28Instrumental%29.mp3"},
         {"name": "Icon003", "url": "https://i.ibb.co/TcrXw6N/image-2024-01-07-171058450.png", "author": "sodasoba", "hoverSound": "https://ia801003.us.archive.org/2/items/Cuphead_OST/Cuphead%20OST%20MP3/02%20Don%27t%20Deal%20With%20The%20Devil%20%28Instrumental%29.mp3"}
       ]
+    },
+    {
+      "name": "Tinfoil",
+      "normalIcon": "https://i.ibb.co/SdX8bRb/image-2024-01-07-173418067.png",
+      "icons": [
+        {"name": "Icon001", "url": "https://i.ibb.co/ng3mrhN/7a7293ff32b2ad98bd4dd01fcf5cd22e.png", "author": "sodasoba"}
+      ]
     }
   ],
   "authors": [
