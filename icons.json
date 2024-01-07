@@ -31,13 +31,30 @@
       "name": "Super Smash Bros. Ultimate",
       "normalIcon": "https://i.ibb.co/5rYHz8z/image-2024-01-07-105342237.png",
       "icons": [
-        {"name": "Icon001", "url": "https://i.ibb.co/gtG3ZfF/530-90-637830690fc72.jpg", "author": "SirKira001", "hoverSound": "https://example.com/ultimate_icon001_sound.mp3"}
+        {"name": "Icon001", "url": "https://i.ibb.co/gtG3ZfF/530-90-637830690fc72.jpg", "author": "SirKira001", "hoverSound": "https://github.com/HomebrewHeroes/customgameicons/raw/main/MP3/SuperSmashBrosUltimateMainTheme.mp3"}
+      ]
+    },
+    {
+      "name": "A Tale of Synapse: The Chaos Theories",
+      "normalIcon": "https://i.ibb.co/GdLdhmB/image-2024-01-07-165811145.png",
+      "icons": [
+        {"name": "Icon001", "url": "https://i.ibb.co/2NCxQNj/a3590023df66ac92ae35e3316026d17d.png", "author": "sodasoba", "hoverSound": ""}
+      ]
+    },
+    {
+      "name": "Cuphead",
+      "normalIcon": "https://i.ibb.co/CHJbkB9/image-2024-01-07-170919134.png",
+      "icons": [
+        {"name": "Icon001", "url": "https://i.ibb.co/Jd7PCzN/image-2024-01-07-170953246.png", "author": "sodasoba", "hoverSound": "https://ia801003.us.archive.org/2/items/Cuphead_OST/Cuphead%20OST%20MP3/02%20Don%27t%20Deal%20With%20The%20Devil%20%28Instrumental%29.mp3"},
+        {"name": "Icon002", "url": "https://i.ibb.co/gZmBTDy/image-2024-01-07-171027325.png", "author": "sodasoba", "hoverSound": "https://ia801003.us.archive.org/2/items/Cuphead_OST/Cuphead%20OST%20MP3/02%20Don%27t%20Deal%20With%20The%20Devil%20%28Instrumental%29.mp3"},
+        {"name": "Icon003", "url": "https://i.ibb.co/TcrXw6N/image-2024-01-07-171058450.png", "author": "sodasoba", "hoverSound": "https://ia801003.us.archive.org/2/items/Cuphead_OST/Cuphead%20OST%20MP3/02%20Don%27t%20Deal%20With%20The%20Devil%20%28Instrumental%29.mp3"}
       ]
     }
   ],
   "authors": [
     {"name": "Nintendo", "link": "https://www.nintendo.com/us/about/"},
     {"name": "Aarontendo", "link": "https://gamebanana.com/members/2292370"},
+    {"name": "sodasoba", "link": "https://www.steamgriddb.com/profile/76561199237351291"},
     {"name": "SirKira001", "link": "https://gamebanana.com/members/1720925"}
   ]
 }
