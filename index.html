@@ -8,6 +8,13 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            margin-bottom: 20px;
         }
 
         .game-icon {
@@ -19,8 +26,8 @@
 
         .game-group {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
             margin-bottom: 20px;
         }
 
@@ -40,6 +47,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin: 5px;
         }
 
         .custom-icon {
@@ -51,6 +59,21 @@
 
         .custom-icon:hover {
             transform: scale(1.2); /* Scale up on hover */
+        }
+
+        .custom-icons .custom-icon-container {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Styling for the modal */
