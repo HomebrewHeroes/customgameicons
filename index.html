@@ -138,7 +138,6 @@
             background-color: #fff; /* White background */
             color: #333; /* Dark gray text color */
         }
-
     </style>
 </head>
 <body>
@@ -158,6 +157,8 @@
 
     <script>
         let iconsData;
+        let currentAudio;
+        let audioElements = [];
 
         function displayIcons(data, searchQuery) {
             const iconsContainer = document.getElementById('game-icons-container');
@@ -194,12 +195,13 @@
                                 customIcon.addEventListener('mouseover', () => {
                                     customIcon.style.transform = 'scale(1.2)';
                                     customIcon.style.filter = 'brightness(1.2)';
+                                    playHoverSound(icon);
                                 });
                                 customIcon.addEventListener('mouseout', () => {
                                     customIcon.style.transform = 'scale(1)';
                                     customIcon.style.filter = 'brightness(1)';
                                 });
-                                customIcon.addEventListener('click', () => openModal(icon.url));
+                                customIcon.addEventListener('click', () => openModal(icon));
 
                                 const iconDetails = document.createElement('div');
                                 iconDetails.classList.add('icon-details');
@@ -222,12 +224,13 @@
                             customIcon.addEventListener('mouseover', () => {
                                 customIcon.style.transform = 'scale(1.2)';
                                 customIcon.style.filter = 'brightness(1.2)';
+                                playHoverSound(icon);
                             });
                             customIcon.addEventListener('mouseout', () => {
                                 customIcon.style.transform = 'scale(1)';
                                 customIcon.style.filter = 'brightness(1)';
                             });
-                            customIcon.addEventListener('click', () => openModal(icon.url));
+                            customIcon.addEventListener('click', () => openModal(icon));
 
                             const iconDetails = document.createElement('div');
                             iconDetails.classList.add('icon-details');
@@ -250,10 +253,38 @@
             displayIcons(iconsData, query);
         }
 
-        function openModal(imageUrl) {
+        function playHoverSound(icon) {
+            if (icon.hoverSound) {
+                if (audioElements.length > 0) {
+                    // If there are currently playing audio, stop and fade them out
+                    audioElements.forEach(audio => {
+                        audio.pause();
+                        audio.volume = 1;
+                        const fadeOutInterval = setInterval(() => {
+                            audio.volume -= 0.1;
+                            if (audio.volume <= 0.1) {
+                                audio.pause();
+                                audio.currentTime = 0; // Reset the cut point
+                                clearInterval(fadeOutInterval);
+                            }
+                        }, 100);
+                    });
+
+                    // Clear the array
+                    audioElements = [];
+                }
+
+                // Create a new audio element and play the sound
+                const newAudio = new Audio(icon.hoverSound);
+                newAudio.play();
+                audioElements.push(newAudio);
+            }
+        }
+
+        function openModal(icon) {
             const modal = document.getElementById('modal');
             const modalContent = document.getElementById('modal-content');
-            modalContent.innerHTML = `<img src="${imageUrl}" class="modal-content" alt="Large Icon">`;
+            modalContent.innerHTML = `<img src="${icon.url}" class="modal-content" alt="Large Icon">`;
             modal.style.display = 'flex';
         }
 
