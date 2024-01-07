@@ -257,11 +257,11 @@
             const authorWidth = authorWidthInPixels(author);
             
             if (authorLength < 10 && authorWidth < 100) {
-                return '16px';
-            } else if (authorLength < 15 && authorWidth < 150) {
-                return '14px';
-            } else {
                 return '12px';
+            } else if (authorLength < 15 && authorWidth < 150) {
+                return '10px';
+            } else {
+                return '8px';
             }
         }
 
