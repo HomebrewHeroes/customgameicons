@@ -56,6 +56,22 @@
       "icons": [
         {"name": "Icon001", "url": "https://i.ibb.co/ng3mrhN/7a7293ff32b2ad98bd4dd01fcf5cd22e.png", "author": "sodasoba"}
       ]
+    },
+    {
+      "name": "Cruis'n Blast",
+      "normalIcon": "https://i.ibb.co/fxGT61g/FBu-FFvcy-400x400.jpg",
+      "icons": [
+        {"name": "Icon001", "url": "https://i.ibb.co/NChpr8w/5031fe4276fb6a875ffaeaf2aff15db7.png", "author": "sodasoba"},
+        {"name": "Icon002", "url": "https://i.ibb.co/LpjQzJD/image-2024-01-07-175921329.png", "author": "sodasoba"}
+      ]
+    },
+    {
+      "name": "Cris Tales",
+      "normalIcon": "https://i.ibb.co/f8xWf8K/image-2024-01-07-180051898.png",
+      "icons": [
+        {"name": "Icon001", "url": "https://i.ibb.co/dgXbVBM/image-2024-01-07-180124161.png", "author": "sodasoba"},
+        {"name": "Icon002", "url": "https://i.ibb.co/YhPJv5r/e5e2de7f3ef2043b664c121bd22f853c.png", "author": "sodasoba"}
+      ]
     }
   ],
   "authors": [
