@@ -24,7 +24,7 @@
       "name": "Super Mario Bros. Wonder",
       "normalIcon": "https://i.ibb.co/xSXzMFM/1x1-supermariobroswonder-1687454112497.jpg",
       "icons": [
-        {"name": "Icon001", "url": "https://i.ibb.co/WPqXk48/Custom-Snipperclips-Background-1-1.png", "author": "Aarontendo", "hoverSound": "https://example.com/wonder_icon001_sound.mp3"}
+        {"name": "Icon001", "url": "https://i.ibb.co/WPqXk48/Custom-Snipperclips-Background-1-1.png", "author": "Aarontendo", "hoverSound": "https://github.com/HomebrewHeroes/customgameicons/raw/main/MP3/MarioWonderBowserBattle.mp3"}
       ]
     },
     {
