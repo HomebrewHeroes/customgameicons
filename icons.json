@@ -4,16 +4,16 @@
       "name": "Azure Striker Gunvolt 3",
       "normalIcon": "https://i.ibb.co/tpGz4NC/azure-striker-gunvolt-3-button-fin-1658535257886.jpg",
       "icons": [
-        {"name": "Icon001", "url": "https://i.ibb.co/c2mG37P/aec3e4a8bf7a9a78686f7973d4c848b1.png", "author": "sodasoba", "hoverSound": "https://github.com/HomebrewHeroes/customgameicons/raw/main/MP3/AzureStrikerGunvolt3.mp3"}
+        {"name": "Icon001", "url": "https://i.ibb.co/c2mG37P/aec3e4a8bf7a9a78686f7973d4c848b1.png", "author": "sodasoba"}
       ]
     },
     {
       "name": "Cuphead",
       "normalIcon": "https://i.ibb.co/CHJbkB9/image-2024-01-07-170919134.png",
       "icons": [
-        {"name": "Icon001", "url": "https://i.ibb.co/Jd7PCzN/image-2024-01-07-170953246.png", "author": "sodasoba", "hoverSound": "https://ia801003.us.archive.org/2/items/Cuphead_OST/Cuphead%20OST%20MP3/02%20Don%27t%20Deal%20With%20The%20Devil%20%28Instrumental%29.mp3"},
-        {"name": "Icon002", "url": "https://i.ibb.co/gZmBTDy/image-2024-01-07-171027325.png", "author": "sodasoba", "hoverSound": "https://ia801003.us.archive.org/2/items/Cuphead_OST/Cuphead%20OST%20MP3/02%20Don%27t%20Deal%20With%20The%20Devil%20%28Instrumental%29.mp3"},
-        {"name": "Icon003", "url": "https://i.ibb.co/TcrXw6N/image-2024-01-07-171058450.png", "author": "sodasoba", "hoverSound": "https://ia801003.us.archive.org/2/items/Cuphead_OST/Cuphead%20OST%20MP3/02%20Don%27t%20Deal%20With%20The%20Devil%20%28Instrumental%29.mp3"}
+        {"name": "Icon001", "url": "https://i.ibb.co/Jd7PCzN/image-2024-01-07-170953246.png", "author": "sodasoba"},
+        {"name": "Icon002", "url": "https://i.ibb.co/gZmBTDy/image-2024-01-07-171027325.png", "author": "sodasoba"},
+        {"name": "Icon003", "url": "https://i.ibb.co/TcrXw6N/image-2024-01-07-171058450.png", "author": "sodasoba"}
       ]
     },
     {
@@ -23,15 +23,15 @@
         {
           "name": "Scarlet",
           "icons": [
-            {"name": "Icon001", "url": "https://i.ibb.co/jypTZ3p/pokemon-scarlet-icon001-0100-A3-D008-C5-C000.png", "author": "Aarontendo", "hoverSound": "https://play.pokemonshowdown.com/audio/cries/koraidon.mp3"},
-            {"name": "Icon002", "url": "https://i.ibb.co/1mcjLB5/image-2024-01-06-160902255.png", "author": "Nintendo", "hoverSound": "https://play.pokemonshowdown.com/audio/cries/koraidon.mp3"}
+            {"name": "Icon001", "url": "https://i.ibb.co/jypTZ3p/pokemon-scarlet-icon001-0100-A3-D008-C5-C000.png", "author": "Aarontendo"},
+            {"name": "Icon002", "url": "https://i.ibb.co/1mcjLB5/image-2024-01-06-160902255.png", "author": "Nintendo"}
           ]
         },
         {
           "name": "Violet",
           "icons": [
-            {"name": "Icon001", "url": "https://i.ibb.co/0VK7TQ3/Pokemon-Violet.png", "author": "Aarontendo", "hoverSound": "https://play.pokemonshowdown.com/audio/cries/miraidon.mp3"},
-            {"name": "Icon002", "url": "https://i.ibb.co/cc0Tcc1/pokemon-violet-zczj.jpg", "author": "Nintendo", "hoverSound": "https://play.pokemonshowdown.com/audio/cries/miraidon.mp3"}
+            {"name": "Icon001", "url": "https://i.ibb.co/0VK7TQ3/Pokemon-Violet.png", "author": "Aarontendo"},
+            {"name": "Icon002", "url": "https://i.ibb.co/cc0Tcc1/pokemon-violet-zczj.jpg", "author": "Nintendo"}
           ]
         }
       ]
@@ -40,14 +40,14 @@
       "name": "Super Mario Bros. Wonder",
       "normalIcon": "https://i.ibb.co/xSXzMFM/1x1-supermariobroswonder-1687454112497.jpg",
       "icons": [
-        {"name": "Icon001", "url": "https://i.ibb.co/WPqXk48/Custom-Snipperclips-Background-1-1.png", "author": "Aarontendo", "hoverSound": "https://github.com/HomebrewHeroes/customgameicons/raw/main/MP3/MarioWonderBowserBattle.mp3"}
+        {"name": "Icon001", "url": "https://i.ibb.co/WPqXk48/Custom-Snipperclips-Background-1-1.png", "author": "Aarontendo"}
       ]
     },
     {
       "name": "Super Smash Bros. Ultimate",
       "normalIcon": "https://i.ibb.co/5rYHz8z/image-2024-01-07-105342237.png",
       "icons": [
-        {"name": "Icon001", "url": "https://i.ibb.co/gtG3ZfF/530-90-637830690fc72.jpg", "author": "SirKira001", "hoverSound": "https://github.com/HomebrewHeroes/customgameicons/raw/main/MP3/SuperSmashBrosUltimateMainTheme.mp3"}
+        {"name": "Icon001", "url": "https://i.ibb.co/gtG3ZfF/530-90-637830690fc72.jpg", "author": "SirKira001"}
       ]
     },
     {
