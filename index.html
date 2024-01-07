@@ -93,7 +93,6 @@
 
         /* Additional styles for image details */
         .icon-details {
-            color: white;
             font-size: 16px;
             margin-top: 10px;
             opacity: 0;
@@ -169,7 +168,7 @@
 
                                 const iconDetails = document.createElement('div');
                                 iconDetails.classList.add('icon-details');
-                                iconDetails.innerHTML = `By <a href="${data.authors.find(author => author.name === icon.author)?.link}" target="_blank">${icon.author}</a><br>${icon.description}`;
+                                iconDetails.innerHTML = `By <a href="${data.authors.find(author => author.name === icon.author)?.link}" target="_blank">${icon.author}</a><br>`;
                                 
                                 customIconContainer.appendChild(customIcon);
                                 customIconContainer.appendChild(iconDetails);
@@ -192,7 +191,7 @@
                             const iconDetails = document.createElement('div');
                             iconDetails.classList.add('icon-details');
                             iconDetails.innerHTML = `By <a href="${data.authors.find(author => author.name === icon.author)?.link}" target="_blank">${icon.author}</a><br>${icon.description}`;
-                            
+                                
                             customIconContainer.appendChild(customIcon);
                             customIconContainer.appendChild(iconDetails);
                             customIconsContainer.appendChild(customIconContainer);
