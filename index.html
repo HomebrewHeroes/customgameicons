@@ -203,9 +203,10 @@
                                 });
                                 customIcon.addEventListener('click', () => openModal(icon));
 
+                                const truncatedAuthor = truncateAuthor(icon.author, 15); // Truncate to 15 characters
                                 const iconDetails = document.createElement('div');
                                 iconDetails.classList.add('icon-details');
-                                iconDetails.innerHTML = `By <a href="${data.authors.find(author => author.name === icon.author)?.link}" target="_blank">${icon.author}</a><br>`;
+                                iconDetails.innerHTML = `By <a href="${data.authors.find(author => author.name === icon.author)?.link}" target="_blank" style="font-size: ${calculateFontSize(icon.author)}">${truncatedAuthor}</a><br>`;
                                 
                                 customIconContainer.appendChild(customIcon);
                                 customIconContainer.appendChild(iconDetails);
@@ -232,9 +233,10 @@
                             });
                             customIcon.addEventListener('click', () => openModal(icon));
 
+                            const truncatedAuthor = truncateAuthor(icon.author, 15); // Truncate to 15 characters
                             const iconDetails = document.createElement('div');
                             iconDetails.classList.add('icon-details');
-                            iconDetails.innerHTML = `By <a href="${data.authors.find(author => author.name === icon.author)?.link}" target="_blank">${icon.author}</a><br>`;
+                            iconDetails.innerHTML = `By <a href="${data.authors.find(author => author.name === icon.author)?.link}" target="_blank" style="font-size: ${calculateFontSize(icon.author)}">${truncatedAuthor}</a><br>`;
                                 
                             customIconContainer.appendChild(customIcon);
                             customIconContainer.appendChild(iconDetails);
@@ -247,6 +249,42 @@
                     iconsContainer.appendChild(gameGroupContainer);
                 }
             });
+        }
+
+        function calculateFontSize(author) {
+            // Adjust font size based on the length and width of the author's username
+            const authorLength = author.length;
+            const authorWidth = authorWidthInPixels(author);
+            
+            if (authorLength < 10 && authorWidth < 100) {
+                return '16px';
+            } else if (authorLength < 15 && authorWidth < 150) {
+                return '14px';
+            } else {
+                return '12px';
+            }
+        }
+
+        function authorWidthInPixels(author) {
+            // Create a temporary element to calculate the width of the author's username
+            const tempElement = document.createElement('div');
+            tempElement.style.display = 'inline-block';
+            tempElement.style.visibility = 'hidden';
+            tempElement.style.font = '16px Arial';
+            tempElement.textContent = author;
+            document.body.appendChild(tempElement);
+            
+            const width = tempElement.offsetWidth;
+            
+            // Remove the temporary element
+            tempElement.parentNode.removeChild(tempElement);
+            
+            return width;
+        }
+
+        function truncateAuthor(author, maxLength) {
+            // Truncate the author's name if it exceeds the maximum length
+            return author.length > maxLength ? author.substring(0, maxLength) + '...' : author;
         }
 
         function searchIcons(query) {
