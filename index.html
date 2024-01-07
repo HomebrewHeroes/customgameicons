@@ -26,7 +26,7 @@
 
         .game-group {
             display: flex;
-            flex-direction: column;
+            flex-direction: row; /* Updated to display horizontally */
             align-items: center;
             margin-bottom: 20px;
         }
@@ -36,11 +36,12 @@
         }
 
         .custom-icons {
-            display: none;
+            display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
             margin-top: 10px;
-            transition: transform 0.3s ease-in-out;
+            opacity: 0; /* Start with opacity 0 */
+            animation: fadeIn 0.5s ease-in-out forwards; /* Use animation to fade in */
         }
 
         .custom-icon-container {
@@ -54,11 +55,12 @@
             max-width: 100px;
             max-height: 100px;
             cursor: pointer;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
         }
 
         .custom-icon:hover {
             transform: scale(1.2); /* Scale up on hover */
+            filter: brightness(1.2); /* Add white tint on hover */
         }
 
         .custom-icons .custom-icon-container {
@@ -66,13 +68,8 @@
         }
 
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
             to {
                 opacity: 1;
-                transform: translateY(0);
             }
         }
 
@@ -165,7 +162,6 @@
                     normalIcon.src = game.normalIcon; // Use the normalIcon field from the JSON
                     normalIcon.alt = `${gameName} Normal Icon`;
                     normalIcon.classList.add('game-icon');
-                    normalIcon.addEventListener('click', () => toggleCustomIcons(gameGroupContainer));
                     gameGroupContainer.appendChild(normalIcon);
 
                     // Display custom game icons
@@ -185,8 +181,14 @@
                                 customIcon.alt = `${gameName} - ${subcategoryName} - ${icon.name}`;
                                 customIcon.classList.add('custom-icon');
                                 // Add hover effect
-                                customIcon.addEventListener('mouseover', () => customIcon.style.transform = 'scale(1.2)');
-                                customIcon.addEventListener('mouseout', () => customIcon.style.transform = 'scale(1)');
+                                customIcon.addEventListener('mouseover', () => {
+                                    customIcon.style.transform = 'scale(1.2)';
+                                    customIcon.style.filter = 'brightness(1.2)';
+                                });
+                                customIcon.addEventListener('mouseout', () => {
+                                    customIcon.style.transform = 'scale(1)';
+                                    customIcon.style.filter = 'brightness(1)';
+                                });
                                 customIcon.addEventListener('click', () => openModal(icon.url));
 
                                 const iconDetails = document.createElement('div');
@@ -207,8 +209,14 @@
                             customIcon.src = icon.url;
                             customIcon.alt = `${gameName} - ${icon.name}`;
                             customIcon.classList.add('custom-icon');
-                            customIcon.addEventListener('mouseover', () => customIcon.style.transform = 'scale(1.2)');
-                            customIcon.addEventListener('mouseout', () => customIcon.style.transform = 'scale(1)');
+                            customIcon.addEventListener('mouseover', () => {
+                                customIcon.style.transform = 'scale(1.2)';
+                                customIcon.style.filter = 'brightness(1.2)';
+                            });
+                            customIcon.addEventListener('mouseout', () => {
+                                customIcon.style.transform = 'scale(1)';
+                                customIcon.style.filter = 'brightness(1)';
+                            });
                             customIcon.addEventListener('click', () => openModal(icon.url));
 
                             const iconDetails = document.createElement('div');
@@ -226,17 +234,6 @@
                     iconsContainer.appendChild(gameGroupContainer);
                 }
             });
-        }
-
-        function toggleCustomIcons(container) {
-            const customIconsContainer = container.querySelector('.custom-icons');
-            const transformValue = customIconsContainer.style.display;
-
-            if (transformValue === 'flex') {
-                customIconsContainer.style.display = 'none';
-            } else {
-                customIconsContainer.style.display = 'flex';
-            }
         }
 
         // Function to open the modal with a larger image
