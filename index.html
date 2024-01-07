@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Custom Game Icons</title>
     <style>
         body {
@@ -10,28 +11,20 @@
             text-align: center;
         }
 
-        .game-icon {
+        .game-icon,
+        .custom-icon {
             max-width: 150px;
             max-height: 150px;
             cursor: pointer;
             transition: transform 0.3s ease-in-out;
         }
 
-        .game-group {
+        .game-group,
+        .custom-icons {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
             margin-bottom: 20px;
-        }
-
-        .title-group {
-            margin: 20px;
-        }
-
-        .custom-icons {
-            display: none;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
             margin-top: 10px;
             transition: transform 0.3s ease-in-out;
         }
@@ -42,15 +35,8 @@
             align-items: center;
         }
 
-        .custom-icon {
-            max-width: 100px;
-            max-height: 100px;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-        }
-
         .custom-icon:hover {
-            transform: scale(1.2); /* Scale up on hover */
+            transform: scale(1.2);
         }
 
         /* Styling for the modal */
@@ -110,6 +96,7 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Custom Game Icons</h1>
 
@@ -161,10 +148,7 @@
                                 const customIcon = document.createElement('img');
                                 customIcon.src = icon.url;
                                 customIcon.alt = `${gameName} - ${subcategoryName} - ${icon.name}`;
-                                customIcon.classList.add('custom-icon');
-                                // Add hover effect
-                                customIcon.addEventListener('mouseover', () => customIcon.style.transform = 'scale(1.2)');
-                                customIcon.addEventListener('mouseout', () => customIcon.style.transform = 'scale(1)');
+                                customIcon.classList.add('custom-icon', 'hover-scale');
                                 customIcon.addEventListener('click', () => openModal(icon.url));
 
                                 const iconDetails = document.createElement('div');
@@ -184,9 +168,7 @@
                             const customIcon = document.createElement('img');
                             customIcon.src = icon.url;
                             customIcon.alt = `${gameName} - ${icon.name}`;
-                            customIcon.classList.add('custom-icon');
-                            customIcon.addEventListener('mouseover', () => customIcon.style.transform = 'scale(1.2)');
-                            customIcon.addEventListener('mouseout', () => customIcon.style.transform = 'scale(1)');
+                            customIcon.classList.add('custom-icon', 'hover-scale');
                             customIcon.addEventListener('click', () => openModal(icon.url));
 
                             const iconDetails = document.createElement('div');
@@ -200,7 +182,6 @@
                     }
 
                     gameGroupContainer.appendChild(customIconsContainer);
-
                     iconsContainer.appendChild(gameGroupContainer);
                 }
             });
@@ -208,13 +189,7 @@
 
         function toggleCustomIcons(container) {
             const customIconsContainer = container.querySelector('.custom-icons');
-            const transformValue = customIconsContainer.style.display;
-
-            if (transformValue === 'flex') {
-                customIconsContainer.style.display = 'none';
-            } else {
-                customIconsContainer.style.display = 'flex';
-            }
+            customIconsContainer.style.display = customIconsContainer.style.display === 'flex' ? 'none' : 'flex';
         }
 
         // Function to open the modal with a larger image
@@ -243,4 +218,5 @@
             .catch(error => console.error('Error fetching JSON:', error));
     </script>
 </body>
+
 </html>
