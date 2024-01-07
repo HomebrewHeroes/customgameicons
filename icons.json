@@ -56,6 +56,14 @@
       "icons": [
         {"name": "Icon001", "url": "https://i.ibb.co/ng3mrhN/7a7293ff32b2ad98bd4dd01fcf5cd22e.png", "author": "sodasoba"}
       ]
+    },
+    {
+      "name": "Azure Striker Gunvolt 3",
+      "normalIcon": "https://i.ibb.co/tpGz4NC/azure-striker-gunvolt-3-button-fin-1658535257886.jpg",
+      "icons": [
+        {"name": "Icon001", "url": "https://i.ibb.co/c2mG37P/aec3e4a8bf7a9a78686f7973d4c848b1.png", "author": "sodasoba"}
+      ],
+      "hoverSound": "https://github.com/HomebrewHeroes/customgameicons/raw/main/MP3/AzureStrikerGunvolt3.mp3"
     }
   ],
   "authors": [
