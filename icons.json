@@ -72,12 +72,42 @@
         {"name": "Icon001", "url": "https://i.ibb.co/dgXbVBM/image-2024-01-07-180124161.png", "author": "sodasoba"},
         {"name": "Icon002", "url": "https://i.ibb.co/YhPJv5r/e5e2de7f3ef2043b664c121bd22f853c.png", "author": "sodasoba"}
       ]
+    },
+    {
+      "name": "Creature in the Well",
+      "normalIcon": "https://i.ibb.co/C0zTvyr/image-2024-01-07-180630661.png",
+      "icons": [
+        {"name": "Icon001", "url": "https://i.ibb.co/NSfgRpV/image-2024-01-07-180706398.png", "author": "sodasoba"},
+        {"name": "Icon002", "url": "https://i.ibb.co/tHdTNYj/image-2024-01-07-180755293.png", "author": "sodasoba"}
+      ]
+    },
+    {
+      "name": "Crimzon Clover World EXplosion",
+      "normalIcon": "https://i.ibb.co/HtjKRZc/image-2024-01-07-180928650.png",
+      "icons": [
+        {"name": "Icon001", "url": "https://i.ibb.co/bvQTHzF/d0e5de6daedcf05cad800f50b14875e6.png", "author": "sodasoba"}
+      ]
+    },
+    {
+      "name": "Crash Bandicoot: N. Sane Trilogy",
+      "normalIcon": "https://i.imgur.com/E6EK8l0.jpg",
+      "icons": [
+        {"name": "Icon001", "url": "https://i.imgur.com/xaHBo4L.png", "author": "sodasoba"},
+        {"name": "Icon002", "url": "https://i.imgur.com/Rn8zNyP.png", "author": "Xerlientt"},
+        {"name": "Icon003", "url": "https://i.imgur.com/Kr7PXic.png", "author": "darklinkpower"},
+        {"name": "Icon004", "url": "https://i.imgur.com/rvUMVbE.png", "author": "BIGMANCOCONUT"},
+        {"name": "Icon005", "url": "https://i.imgur.com/0Hq1LVZ.png", "author": "sodasoba"},
+        {"name": "Icon006", "url": "https://i.imgur.com/sEghymY.png", "author": "sodasoba"}
+      ]
     }
   ],
   "authors": [
     {"name": "Nintendo", "link": "https://www.nintendo.com/us/about/"},
     {"name": "Aarontendo", "link": "https://gamebanana.com/members/2292370"},
     {"name": "sodasoba", "link": "https://www.steamgriddb.com/profile/76561199237351291"},
-    {"name": "SirKira001", "link": "https://gamebanana.com/members/1720925"}
+    {"name": "SirKira001", "link": "https://gamebanana.com/members/1720925"},
+    {"name": "darklinkpower", "link": "https://www.steamgriddb.com/profile/76561198025294991"},
+    {"name": "BIGMANCOCONUT", "link": "https://www.steamgriddb.com/profile/76561199100807734"},
+    {"name": "Xerlientt", "link": "https://www.steamgriddb.com/profile/76561198319892674"}
   ]
 }
