@@ -14,8 +14,8 @@
         {
           "name": "Violet",
           "icons": [
-            {"name": "Icon001", "url": "https://i.ibb.co/0VK7TQ3/Pokemon-Violet.png", "author": "Aarontendo", "hoverSound": "https://example.com/violet_icon001_sound.mp3"},
-            {"name": "Icon002", "url": "https://i.ibb.co/cc0Tcc1/pokemon-violet-zczj.jpg", "author": "Nintendo", "hoverSound": "https://example.com/violet_icon002_sound.mp3"}
+            {"name": "Icon001", "url": "https://i.ibb.co/0VK7TQ3/Pokemon-Violet.png", "author": "Aarontendo", "hoverSound": "https://play.pokemonshowdown.com/audio/cries/miraidon.mp3"},
+            {"name": "Icon002", "url": "https://i.ibb.co/cc0Tcc1/pokemon-violet-zczj.jpg", "author": "Nintendo", "hoverSound": "https://play.pokemonshowdown.com/audio/cries/miraidon.mp3"}
           ]
         }
       ]
