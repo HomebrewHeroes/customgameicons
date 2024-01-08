@@ -1,0 +1,116 @@
+Can you also make it fetch icons from github, https://github.com/sodasoba1/NSW-Custom-Game-Icons-square/tree/main/Default
+
+There a subdirectories with game icons, subdirectories form this folder are:
+
+0-9
+78 new square icons
+5 days ago
+A
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+Arcade-archive
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+B
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+C
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+D
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+E
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+F
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+G
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+H
+blurred keyart & logos
+4 days ago
+I
+blurred keyart & logos
+4 days ago
+J
+blurred keyart & logos
+4 days ago
+K
+blurred keyart & logos
+4 days ago
+L
+blurred keyart & logos
+4 days ago
+M
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+N
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+O
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+P
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+Q
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+R
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+S
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+T
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+U
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+V
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+W
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+X
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+Y
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+Z
+moved arcade-archive into their own folder, added more blurred style
+2 days ago
+
+Only use names of subdirectories, these subdirectories have icons:
+
+#drive-icon01-[01000F20122FA000].jpg
+
+In this example, this file is in 0-9 (subdirectory)
+
+The name of the game is #drive
+
+The icon name is icon01
+The title id of the game on nintendo switch is: 01000F20122FA000 because it is in the [] square brackets.
+
+For a game like this, 1-2-switch-icon-001-[01000320000CC000].jpg
+
+The game name retrieved should be 1 2 switch
+
+the icon name: icon-001
+Title id for nintendo switch game: 01000320000CC000
+
+Can you make it use these files as well as the ones already in the .json file.
+
+All authors of these icons are sodasoba (In json file the author is linked)
+
+E.g https://raw.githubusercontent.com/sodasoba1/NSW-Custom-Game-Icons-square/main/Default/C/Castle-of-Shikigami-2-icon001-%5B010061E018D3C000%5D.jpg is the full link of a game
+
+Template is: https://raw.githubusercontent.com/sodasoba1/NSW-Custom-Game-Icons-square/main/Default/<subdirectory><fulliconnamewithend>
+
+Full icon name with end would be Castle-of-Shikigami-2-icon001-%5B010061E018D3C000%5D.jpg in this case.
